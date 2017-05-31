@@ -7,6 +7,20 @@ class ToDoListsController < ApplicationController
     @to_do_list = ToDoList.find(params[:id])
   end
 
+  def edit
+    @to_do_list = ToDoList.find(params[:id])
+  end
+
+  def update
+    @to_do_list = ToDoList.find(params[:id])
+
+    if @to_do_list.update(to_do_list_params)
+      redirect_to to_do_lists_path
+    else
+        render :edit
+    end
+  end
+
   def new
     @to_do_list = ToDoList.new
   end

@@ -1,0 +1,10 @@
+<h1>Edit To Do List Item</h1>
+<%= form_for @to_do_list do |f| %>
+    <%= f.label :item %>
+    <%= f.text_field :item %>
+    <br />
+    <%= f.label :notes %>
+    <%= f.text_field :notes %>
+
+    <%= f.submit %>
+<% end %>
