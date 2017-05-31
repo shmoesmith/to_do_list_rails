@@ -4,4 +4,5 @@
 <h2><%= to_do_list.item %></h2>
 <%= link_to 'Show Notes', to_do_list_path(to_do_list) %>
 <%= link_to 'Edit Item', edit_to_do_list_path(to_do_list) %>
+<%= link_to 'Remove item from list', to_do_list, method: :delete %>
 <% end %>

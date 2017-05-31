@@ -21,6 +21,12 @@ class ToDoListsController < ApplicationController
     end
   end
 
+  def destroy
+   @to_do_list = ToDoList.find(params[:id])
+   @to_do_list.destroy
+   redirect_to to_do_lists_path
+  end 
+
   def new
     @to_do_list = ToDoList.new
   end
